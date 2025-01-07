@@ -12,4 +12,30 @@
   1.3 DEM preparation
       The topography is also needed in UTM and the area must be at least 4 times the area of the volcano.
       In the same way I do it in QGIS, I open the Copernicus DEM in degrees I see the area of my velocity tif that generated before and save it four times bigger than my DEM in tif format and hdr format.
-  1.4 
+  1.4 pyhton code UTMTIF_2_r4_format.py
+      Use the python code to save the UTM tif to r4 format.
+      In the script the input files are
+      UTM tifs
+        121A_090_UTM.tif
+        040D_088_UTM.tif
+        DEM.tif
+      Outputs r4 files
+        ASC_utm.r4
+        DESC_utm.r4
+        hgt_utm.r4
+    1.5 In step 1.3 and 1.2 it was saved as hdr format you must put the same names as your r4 files, also inside the hdr file you must change the name of the file in the field
+        e.g.
+        description = {
+        ASC_utm.r4} 
+
+
+        For each Ascendning, Descendning and DEM files
+    1.6 INSAR.txt file input
+
+          This file contains the average values of the U, N and E components of the incidence and heading angles, you can get them from the LiCSAR files, but attached for tracks 142, 40 Descendning and 18 and 121 for Ascending.
+
+          Satellite Pass Looking Track Wavelength RADARLOOK_X RADARLOOK_Y RADARLOOK_Z
+          S1 D R 142 0.056 0.6574 -0.1415 0.7401
+          S1 A R 18 0.056 -0.6857 -0.1479 0.7126
+          S1 A R 121 0.056 -0.6033045 -0.128242 0.775
+          S1 D R 40 0.056 0.58906085 -0.123942 0.790083
