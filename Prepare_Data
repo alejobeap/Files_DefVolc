@@ -1,11 +1,11 @@
 1. Prepare Data
   1.1 Firts use the LicSBAS commands to extrat the tif files e.g.
     Velocity:
-      LiCSBAS_cum2vel.py -i TS_GEOCml1_volcano\mask/cum_filt.h5 --vstd --mask TS_GEOCml1_volcano\mask/results/mask --png
-      LiCSBAS_flt2geotiff.py -i 2*.vel.mskd -p TS_GEOCml1_volcano\mask/info/EQA.dem_par
+      LiCSBAS_cum2vel.py -i TS_GEOCml1_volcano_mask/cum_filt.h5 --vstd --mask TS_GEOCml1_volcano_mask/results/mask --png
+      LiCSBAS_flt2geotiff.py -i 2*.vel.mskd -p TS_GEOCml1_volcano_mask/info/EQA.dem_par
     Cumulative:
-      LiCSBAS_cum2flt.py -i TS_GEOCml1_volcano\mask/cum_filt.h5 --mask TS_GEOCml1_volcano\mask/results/mask --png
-      LiCSBAS_flt2geotiff.py -i 2*.cum -p TS_GEOCml1_volcano\mask/info/EQA.dem_par
+      LiCSBAS_cum2flt.py -i TS_GEOCml1_volcano_mask/cum_filt.h5 --mask TS_GEOCml1_volcano_mask/results/mask --png
+      LiCSBAS_flt2geotiff.py -i 2*.cum -p TS_GEOCml1_volcano_mask/info/EQA.dem_par
   These will give you the tifs in WGS84 Lat and Lon in degrees.
   1.2 Change to UTM the tif
       Normally I open it in QGIS and save it in UTM, but you can use gdal to do it automatically.
