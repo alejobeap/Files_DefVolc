@@ -1,0 +1,28 @@
+DEFVOLC ARC installation version 2018 (works for me)
+ 
+$ mkdir -p /nobackup/$USER/defvolc
+$ cd /nobackup/$USER/defvolc
+# steps for building matlab runtime
+$ curl -LO https://ssd.mathworks.com/supportfiles/downloads/R2018b/deployment_files/R2018b/installers/glnxa64/MCR_R2018b_glnxa64_installer.zip
+$ unzip MCR_R2018b_glnxa64_installer.zip
+$ mkdir build
+$ ./install -mode silent -agreeToLicense yes -destinationFolder $(pwd)/build/
+# then whereever you have installed and unzipped DefVolc
+$ ./run_launch_DefVolc.sh /nobackup/$USER/defvolc/build/v95/
+ 
+ 
+ 
+ 
+##########
+ 
+Version 2023 (doesn't works for me in my laptop but in the server is ok)
+ 
+$ mkdir -p /nobackup/$USER/defvolc_2023
+$ cd /nobackup/$USER/defvolc_2023
+# steps for building matlab runtime
+$ curl -LO https://ssd.mathworks.com/supportfiles/downloads/R2022a/Release/7/deployment_files/installer/complete/glnxa64/MATLAB_Runtime_R2022a_Update_7_glnxa64.zip
+$ unzip MATLAB_Runtime_R2022a_Update_6_glnxa64.zip
+$ mkdir build
+$ ./install -mode silent -agreeToLicense yes -destinationFolder $(pwd)/build/
+# then whereever you have installed and unzipped DefVolc
+$ ./run_launch_DefVolc.sh /nobackup/$USER/defvolc_2023/build/v95/
